@@ -14,7 +14,7 @@ ul li a{
     text-decoration: none;
     color: white;
     padding-left: 0rem;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 600;
     transition: all .5s ease-out;
 }
@@ -32,6 +32,8 @@ ul li:hover a{
     margin: auto;
     padding: 2rem;
 }
+
+/*Note that I used gridbox as a way to practice it. I still think I need more practice, however, as this was only possible due to referencing old projects and explenations online. */
 
 /*header*/
 #banner {
@@ -54,6 +56,8 @@ ul li:hover a{
     overflow: hidden;
     position: relative;
 }
+
+/*Explenation: Repeating linear gradient achieves the square look im going for, and I shortened the animation notation to all be in one line. If I wanted it to be simpler, i'd use animation name, duration, etc. Sicne it's meant to be automatic, it's set to repeat infinitely. The actual size of the gradient being 200% is so that even if it scrolls, there's no empty space. It's not actually repeating infinitely like it seems, but it's a good way to trick it. */
 
 .logo-scroll {
     width: 200%;
@@ -87,6 +91,7 @@ ul li:hover a{
     letter-spacing: .35rem;
 }
 
+
 /*arrows*/
 .arrows img {
     width: 96px;
@@ -94,6 +99,8 @@ ul li:hover a{
     transition: filter 0.3s;
     
 }
+
+/* This makes the arrows dissapear when pressed, which is the click interaction. */
 
 input:checked + label img {
     filter: invert(1);
@@ -188,3 +195,6 @@ footer {
     margin-top: 2rem;
     font-size: 0.9rem;
 }
+
+
+/*Some overall notes: I'm using rem so I can adjust things easier on the fly and so i'm not limtied to specific pixels. I also tried my best to avoid too much complication since a lot of my effort was on grid. I wanted to figure out how to get my header to look exactly as it does in photoshop, but I think i'd need to actually write down the grid values per box (like doing B,C,C,F, etc), and I didn't find that effort to be worht it when generally it look fine regardless. */
