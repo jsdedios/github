@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Experiment 1</title>
+</head>
+<body>
+    
+    <div id="textcontainer">
+        <h1>Experiment 1</h1>
+        <h2>The following script displays a list of colors of your choosing within the console! To open the console, inspect the page and click on "console" within the top bar.</h2>
+    </div>
+
+    <script>
+
+
+        var theReds = ['Crimson', 'Rose', 'Jam', 'Ruby', 'Lipstick', 'Blood', 'Scarlet', 'Sangria', 'Brick', 'Berry'];
+
+        var theBlues = ['Azure', 'Navy', 'Sky', 'Turqoise', 'Voilet Blue', 'Cerulean', 'Lapis', 'Arctic', 'Denim', 'Ocean'];
+
+        var theYellows = ['Gold', 'Amber', 'Canary', 'Lemon', 'GoldenRod', 'Mustard', 'Beige', 'Khaki', 'Corn', 'Blond']
+
+
+        var userCol = prompt('Do you prefer Reds, Blues, or Yellows?', '');
+        
+        if( userCol == 'Reds'){
+            console.log('Enjoy your list of reds!');
+            for ( var i=0; i<11; i++){
+                console.log (theReds[i])
+            }
+        }
+
+         if( userCol == 'Blues'){
+            console.log('Enjoy your list of blues!');
+            for ( var i=0; i<11; i++){
+                console.log (theBlues[i])
+            }
+        }
+
+         if( userCol == 'Yellows'){
+            console.log('Enjoy your list of yellows!');
+            for ( var i=0; i<11; i++){
+                console.log (theYellows[i])
+            }
+        }
+
+    </script>
+
+</body>
+</html>
