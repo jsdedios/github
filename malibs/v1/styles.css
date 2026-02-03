@@ -1,0 +1,121 @@
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #1c1c1c;
+  color: #f2f2f2;
+  line-height: 1.5;
+}
+
+
+header {
+  text-align: center;
+  padding: 3rem 2rem 2.5rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+header p {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #cfcfcf;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+
+.card {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  border: 1px solid #d9d9d9;
+  min-height: 520px;
+}
+
+
+.media-column {
+  border-right: 1px solid #d9d9d9;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.media-column img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* Form layout */
+
+form {
+  padding: 2.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  row-gap: 1.75rem;
+}
+
+/* fields */
+
+.form-grid article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+label {
+  font-size: 0.75rem;
+  color: #d0d0d0;
+}
+
+/* input*/
+
+input[type="text"] {
+  background-color: transparent;
+  border: 1px solid #9a9a9a;
+  background-color: #303030;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 0.4rem 0.5rem;
+  font-size: 0.85rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #ffffff;
+}
+
+
+
+input[type="submit"] {
+  margin-top: 2.5rem;
+  padding: 0.75rem 2rem;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #ffffff;
+  color: #1c1c1c;
+}
