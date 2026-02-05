@@ -175,7 +175,7 @@ input[type="submit"]:hover {
     border-right: none;
     border-bottom: 1px solid #d9d9d9;
 
-    /* turn the left column into a row of images */
+    
     flex-direction: row;
     gap: 1rem;
     padding: 1.25rem;
@@ -183,7 +183,7 @@ input[type="submit"]:hover {
 
   .media-column img {
     width: 100%;
-    max-width: 120px; /* keeps them from getting huge */
+    max-width: 120px; 
   }
 
   form {
@@ -191,15 +191,15 @@ input[type="submit"]:hover {
   }
 
   .form-grid {
-    grid-template-columns: 1fr; /* one column inputs */
+    grid-template-columns: 1fr;
     column-gap: 0;
   }
 
   .story {
     padding: 1.5rem;
-    font-size: 1.05rem; /* 1.8rem is huge on mobile */
+    font-size: 1.05rem; 
   }
-
+  
   header h1 {
     font-size: 2.1rem;
   }
