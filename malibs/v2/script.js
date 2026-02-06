@@ -33,7 +33,7 @@
     event.preventDefault();
 
     
-    const storyHTML = `
+    let storyHTML = `
       <p class ="story">
         On one calm afternoon, a group of ${adj1} minded people came together to work on a new,
         never before seen visual style. They ${verb1} all afternoon, ensuring that they had all
