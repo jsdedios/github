@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yahtzee!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <button class="icon-btn" -label="Help">?</button>
+
+    <h1 class="title">Yahtzee!</h1>
+
+<!-- Scoreboard -->
+    <aside class="scoreboard">
+      <table class="score-table">
+        <thead>
+          <tr>
+            <th>Rolls</th>
+            <th>P1</th>
+            <th>P2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Aces</td><td></td><td></td></tr>
+          <tr><td>Twos</td><td></td><td></td></tr>
+          <tr><td>Threes</td><td></td><td></td></tr>
+          <tr><td>Fours</td><td></td><td></td></tr>
+          <tr><td>Fives</td><td></td><td></td></tr>
+          <tr><td>Sixes</td><td></td><td></td></tr>
+          <tr class="row-strong"><td>Total score</td><td></td><td></td></tr>
+          <tr class="row-strong"><td>Bonus</td><td></td><td></td></tr>
+          <tr><td>3 of a kind</td><td></td><td></td></tr>
+          <tr><td>4 of a kind</td><td></td><td></td></tr>
+          <tr><td>Full house</td><td></td><td></td></tr>
+          <tr><td>Small straight</td><td></td><td></td></tr>
+          <tr><td>Large Straight</td><td></td><td></td></tr>
+          <tr><td>Yahtzee!</td><td></td><td></td></tr>
+          <tr><td>Chance</td><td></td><td></td></tr>
+          <tr class="row-strong"><td>Grand Total</td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </aside>
+
+
+    <section class="rolls-left">
+      <div class="rolls-left-label">Rolls left:</div>
+      <div class="rolls-left-value">3</div>
+    </section>
+
+
+    <section class="dice-strip">
+      <div class="diceroll">
+
+
+
+        <div class="dice-wrap">
+          <div id="dice-1" class="dice show-1">
+            <div class="side"><span class="dot one-1"></span></div>
+            <div class="side"><span class="dot two-1"></span><span class="dot two-2"></span></div>
+            <div class="side"><span class="dot three-1"></span><span class="dot three-2"></span><span class="dot three-3"></span></div>
+            <div class="side"><span class="dot four-1"></span><span class="dot four-3"></span><span class="dot four-2"></span><span class="dot four-4"></span></div>
+            <div class="side"><span class="dot five-1"></span><span class="dot five-3"></span><span class="dot five-5"></span><span class="dot five-2"></span><span class="dot five-4"></span></div>
+            <div class="side">
+              <span class="dot six-1"></span><span class="dot six-2"></span><span class="dot six-3"></span>
+              <span class="dot six-4"></span><span class="dot six-5"></span><span class="dot six-6"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dice-wrap">
+          <div id="dice-2" class="dice show-2">
+            <div class="side"><span class="dot one-1"></span></div>
+            <div class="side"><span class="dot two-1"></span><span class="dot two-2"></span></div>
+            <div class="side"><span class="dot three-1"></span><span class="dot three-2"></span><span class="dot three-3"></span></div>
+            <div class="side"><span class="dot four-1"></span><span class="dot four-3"></span><span class="dot four-2"></span><span class="dot four-4"></span></div>
+            <div class="side"><span class="dot five-1"></span><span class="dot five-3"></span><span class="dot five-5"></span><span class="dot five-2"></span><span class="dot five-4"></span></div>
+            <div class="side">
+              <span class="dot six-1"></span><span class="dot six-2"></span><span class="dot six-3"></span>
+              <span class="dot six-4"></span><span class="dot six-5"></span><span class="dot six-6"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dice-wrap">
+          <div id="dice-3" class="dice show-3">
+            <div class="side"><span class="dot one-1"></span></div>
+            <div class="side"><span class="dot two-1"></span><span class="dot two-2"></span></div>
+            <div class="side"><span class="dot three-1"></span><span class="dot three-2"></span><span class="dot three-3"></span></div>
+            <div class="side"><span class="dot four-1"></span><span class="dot four-3"></span><span class="dot four-2"></span><span class="dot four-4"></span></div>
+            <div class="side"><span class="dot five-1"></span><span class="dot five-3"></span><span class="dot five-5"></span><span class="dot five-2"></span><span class="dot five-4"></span></div>
+            <div class="side">
+              <span class="dot six-1"></span><span class="dot six-2"></span><span class="dot six-3"></span>
+              <span class="dot six-4"></span><span class="dot six-5"></span><span class="dot six-6"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dice-wrap">
+          <div id="dice-4" class="dice show-4">
+            <div class="side"><span class="dot one-1"></span></div>
+            <div class="side"><span class="dot two-1"></span><span class="dot two-2"></span></div>
+            <div class="side"><span class="dot three-1"></span><span class="dot three-2"></span><span class="dot three-3"></span></div>
+            <div class="side"><span class="dot four-1"></span><span class="dot four-3"></span><span class="dot four-2"></span><span class="dot four-4"></span></div>
+            <div class="side"><span class="dot five-1"></span><span class="dot five-3"></span><span class="dot five-5"></span><span class="dot five-2"></span><span class="dot five-4"></span></div>
+            <div class="side">
+              <span class="dot six-1"></span><span class="dot six-2"></span><span class="dot six-3"></span>
+              <span class="dot six-4"></span><span class="dot six-5"></span><span class="dot six-6"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dice-wrap">
+          <div id="dice-5" class="dice show-5">
+            <div class="side"><span class="dot one-1"></span></div>
+            <div class="side"><span class="dot two-1"></span><span class="dot two-2"></span></div>
+            <div class="side"><span class="dot three-1"></span><span class="dot three-2"></span><span class="dot three-3"></span></div>
+            <div class="side"><span class="dot four-1"></span><span class="dot four-3"></span><span class="dot four-2"></span><span class="dot four-4"></span></div>
+            <div class="side"><span class="dot five-1"></span><span class="dot five-3"></span><span class="dot five-5"></span><span class="dot five-2"></span><span class="dot five-4"></span></div>
+            <div class="side">
+              <span class="dot six-1"></span><span class="dot six-2"></span><span class="dot six-3"></span>
+              <span class="dot six-4"></span><span class="dot six-5"></span><span class="dot six-6"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dice-wrap">
+          <div id="dice-6" class="dice show-6">
+            <div class="side"><span class="dot one-1"></span></div>
+            <div class="side"><span class="dot two-1"></span><span class="dot two-2"></span></div>
+            <div class="side"><span class="dot three-1"></span><span class="dot three-2"></span><span class="dot three-3"></span></div>
+            <div class="side"><span class="dot four-1"></span><span class="dot four-3"></span><span class="dot four-2"></span><span class="dot four-4"></span></div>
+            <div class="side"><span class="dot five-1"></span><span class="dot five-3"></span><span class="dot five-5"></span><span class="dot five-2"></span><span class="dot five-4"></span></div>
+            <div class="side">
+              <span class="dot six-1"></span><span class="dot six-2"></span><span class="dot six-3"></span>
+              <span class="dot six-4"></span><span class="dot six-5"></span><span class="dot six-6"></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="dice-divider" -hidden="true"></div>
+    </section>
+
+    <!-- Controls -->
+    <div class="controls">
+      <div class="player-pill">P1</div>
+      <button class="btn btn-primary" type="button">Roll dice</button>
+    </div>
+
+
+</body>
+</html>

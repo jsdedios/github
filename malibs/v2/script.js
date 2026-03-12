@@ -5,6 +5,10 @@
   const myForm = document.querySelector('#myform');
 
 
+
+  myForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
   const adj1 = document.querySelector('#adj1').value;
 
   const verb1 = document.querySelector('#verb1').value;
@@ -28,10 +32,6 @@
   const noun2 = document.querySelector('#noun2').value;
 
   const adj4 = document.querySelector('#adj4').value;
-
-  myForm.addEventListener('submit', function (event) {
-    event.preventDefault();
-
     
     let storyHTML = `
       <p class ="story">
@@ -50,7 +50,7 @@
         With its clear inspiration from ${emotion2} and its ${adj4} style,
         it made waves across the world and was renowned as the most beautiful aesthetic on earth.
       </p>
-    `;
+    `
 
     
     myForm.innerHTML = storyHTML;
