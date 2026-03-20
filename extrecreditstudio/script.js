@@ -182,8 +182,9 @@
     }
 
     function closeHelpModal() {
+        playCloseSound();
         helpOverlay.className = 'overlay hidden';
-        helpOverlay.setAttribute('aria-hidden', 'true');
+        helpOverlay.setAttribute('aria-hidden','true');
     }
 
     function rollDie() {
@@ -195,6 +196,15 @@
         sfx.volume = 0.5;
         sfx.play().catch(function () {
             console.log('Roll sound could not play.');
+        });
+    }
+
+    function playCloseSound() {
+        const sfx = new Audio('sounds/button-click.mp3');
+        sfx.volume = 0.5;
+        console.log('sound played!')
+        sfx.play().catch(function () {
+            console.log('Close sound could not play.');
         });
     }
 })();
