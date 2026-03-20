@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Even Steven</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <button id="help-btn" class="icon-btn" aria-label="Help">?</button>
+
+  <h1 class="title">Even Steven</h1>
+
+  <section class="status-panel">
+    <p id="status-message">Press start to begin.</p>
+  </section>
+
+  <section class="goal-display-p1">
+    <div class="goal-label-p1">P1 Goal:</div>
+    <div id="p1-goal-value" class="goal-value">100</div>
+  </section>
+
+  <section class="goal-display-p2">
+    <div class="goal-label-p2">P2 Goal:</div>
+    <div id="p2-goal-value" class="goal-value">100</div>
+  </section>
+
+  <section class="dice-strip">
+    <div class="diceroll">
+      <div class="dice-wrap">
+        <div id="dice-1" class="dice show-1">
+          <div class="side"><span class="dot one-1"></span></div>
+          <div class="side"><span class="dot two-1"></span><span class="dot two-2"></span></div>
+          <div class="side"><span class="dot three-1"></span><span class="dot three-2"></span><span class="dot three-3"></span></div>
+          <div class="side"><span class="dot four-1"></span><span class="dot four-3"></span><span class="dot four-2"></span><span class="dot four-4"></span></div>
+          <div class="side"><span class="dot five-1"></span><span class="dot five-3"></span><span class="dot five-5"></span><span class="dot five-2"></span><span class="dot five-4"></span></div>
+          <div class="side">
+            <span class="dot six-1"></span><span class="dot six-2"></span><span class="dot six-3"></span>
+            <span class="dot six-4"></span><span class="dot six-5"></span><span class="dot six-6"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dice-wrap">
+        <div id="dice-2" class="dice show-2">
+          <div class="side"><span class="dot one-1"></span></div>
+          <div class="side"><span class="dot two-1"></span><span class="dot two-2"></span></div>
+          <div class="side"><span class="dot three-1"></span><span class="dot three-2"></span><span class="dot three-3"></span></div>
+          <div class="side"><span class="dot four-1"></span><span class="dot four-3"></span><span class="dot four-2"></span><span class="dot four-4"></span></div>
+          <div class="side"><span class="dot five-1"></span><span class="dot five-3"></span><span class="dot five-5"></span><span class="dot five-2"></span><span class="dot five-4"></span></div>
+          <div class="side">
+            <span class="dot six-1"></span><span class="dot six-2"></span><span class="dot six-3"></span>
+            <span class="dot six-4"></span><span class="dot six-5"></span><span class="dot six-6"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dice-wrap">
+        <div id="dice-3" class="dice show-3">
+          <div class="side"><span class="dot one-1"></span></div>
+          <div class="side"><span class="dot two-1"></span><span class="dot two-2"></span></div>
+          <div class="side"><span class="dot three-1"></span><span class="dot three-2"></span><span class="dot three-3"></span></div>
+          <div class="side"><span class="dot four-1"></span><span class="dot four-3"></span><span class="dot four-2"></span><span class="dot four-4"></span></div>
+          <div class="side"><span class="dot five-1"></span><span class="dot five-3"></span><span class="dot five-5"></span><span class="dot five-2"></span><span class="dot five-4"></span></div>
+          <div class="side">
+            <span class="dot six-1"></span><span class="dot six-2"></span><span class="dot six-3"></span>
+            <span class="dot six-4"></span><span class="dot six-5"></span><span class="dot six-6"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dice-wrap">
+        <div id="dice-4" class="dice show-4">
+          <div class="side"><span class="dot one-1"></span></div>
+          <div class="side"><span class="dot two-1"></span><span class="dot two-2"></span></div>
+          <div class="side"><span class="dot three-1"></span><span class="dot three-2"></span><span class="dot three-3"></span></div>
+          <div class="side"><span class="dot four-1"></span><span class="dot four-3"></span><span class="dot four-2"></span><span class="dot four-4"></span></div>
+          <div class="side"><span class="dot five-1"></span><span class="dot five-3"></span><span class="dot five-5"></span><span class="dot five-2"></span><span class="dot five-4"></span></div>
+          <div class="side">
+            <span class="dot six-1"></span><span class="dot six-2"></span><span class="dot six-3"></span>
+            <span class="dot six-4"></span><span class="dot six-5"></span><span class="dot six-6"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dice-wrap">
+        <div id="dice-5" class="dice show-5">
+          <div class="side"><span class="dot one-1"></span></div>
+          <div class="side"><span class="dot two-1"></span><span class="dot two-2"></span></div>
+          <div class="side"><span class="dot three-1"></span><span class="dot three-2"></span><span class="dot three-3"></span></div>
+          <div class="side"><span class="dot four-1"></span><span class="dot four-3"></span><span class="dot four-2"></span><span class="dot four-4"></span></div>
+          <div class="side"><span class="dot five-1"></span><span class="dot five-3"></span><span class="dot five-5"></span><span class="dot five-2"></span><span class="dot five-4"></span></div>
+          <div class="side">
+            <span class="dot six-1"></span><span class="dot six-2"></span><span class="dot six-3"></span>
+            <span class="dot six-4"></span><span class="dot six-5"></span><span class="dot six-6"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dice-wrap">
+        <div id="dice-6" class="dice show-6">
+          <div class="side"><span class="dot one-1"></span></div>
+          <div class="side"><span class="dot two-1"></span><span class="dot two-2"></span></div>
+          <div class="side"><span class="dot three-1"></span><span class="dot three-2"></span><span class="dot three-3"></span></div>
+          <div class="side"><span class="dot four-1"></span><span class="dot four-3"></span><span class="dot four-2"></span><span class="dot four-4"></span></div>
+          <div class="side"><span class="dot five-1"></span><span class="dot five-3"></span><span class="dot five-5"></span><span class="dot five-2"></span><span class="dot five-4"></span></div>
+          <div class="side">
+            <span class="dot six-1"></span><span class="dot six-2"></span><span class="dot six-3"></span>
+            <span class="dot six-4"></span><span class="dot six-5"></span><span class="dot six-6"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dice-divider"></div>
+  </section>
+
+  <section id="help-overlay" class="overlay hidden" aria-hidden="true">
+    <div class="overlay-card help-card">
+      <button id="close-help-btn" class="close-btn" type="button" aria-label="Close rules">×</button>
+      <h2 class="help-title">How to Play</h2>
+      <p class="help-copy">Press <strong>Start Game</strong> to begin. The button switches to <strong>Roll Dice</strong> and Player 1 takes the first turn.</p>
+      <p class="help-copy">Each roll uses all six dice. If the total is <strong>even</strong>, that total gets added to the current player's score. If the total is <strong>odd</strong>, no points are added and the turn moves to the next player.</p>
+      <p class="help-copy">The first player to reach <strong>100 points</strong> wins. Each goal readout shows how many points that player still needs to win.</p>
+    </div>
+  </section>
+
+  <div class="controls">
+    <div id="player-pill" class="player-pill">P1</div>
+    <button id="action-btn" class="btn btn-primary start-state" type="button">Start Game</button>
+  </div>
+
+  <section id="winner-overlay" class="overlay hidden">
+    <div class="overlay-card">
+      <h2 id="winner-message">Winner goes here</h2>
+      <button id="reset-btn" class="btn btn-primary overlay-btn" type="button">Reset Game</button>
+    </div>
+  </section>
+
+</body>
+</html>
