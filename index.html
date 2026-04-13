@@ -1,132 +1,180 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <title>Joshua's Portal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yahtzee!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-<div id="pagecontainer">
+    <button class="icon-btn" -label="Help">?</button>
 
-    <!-- header -->
-    <div id="banner">
-        <header class="header-grid">
+    <h1 class="title">Yahtzee!</h1>
 
-            <div class="logo-mask">
-                <div class="logo-scroll"></div>
+<!-- Scoreboard -->
+    <!-- <aside class="scoreboard">
+      <table class="score-table">
+        <thead>
+          <tr>
+            <th>Rolls</th>
+            <th>P1</th>
+            <th>P2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Aces</td><td></td><td></td></tr>
+          <tr><td>Twos</td><td></td><td></td></tr>
+          <tr><td>Threes</td><td></td><td></td></tr>
+          <tr><td>Fours</td><td></td><td></td></tr>
+          <tr><td>Fives</td><td></td><td></td></tr>
+          <tr><td>Sixes</td><td></td><td></td></tr>
+          <tr class="row-strong"><td>Total score</td><td></td><td></td></tr>
+          <tr class="row-strong"><td>Bonus</td><td></td><td></td></tr>
+          <tr><td>3 of a kind</td><td></td><td></td></tr>
+          <tr><td>4 of a kind</td><td></td><td></td></tr>
+          <tr><td>Full house</td><td></td><td></td></tr>
+          <tr><td>Small straight</td><td></td><td></td></tr>
+          <tr><td>Large Straight</td><td></td><td></td></tr>
+          <tr><td>Yahtzee!</td><td></td><td></td></tr>
+          <tr><td>Chance</td><td></td><td></td></tr>
+          <tr class="row-strong"><td>Grand Total</td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </aside> -->
+
+
+
+
+    <section class="rolls-left">
+      <div class="rolls-left-label">Rolls left:</div>
+      <div class="rolls-left-value">3</div>
+    </section>
+
+
+    <section class="dice-strip">
+      <div class="diceroll">
+
+
+
+        <div class="dice-wrap">
+          <div id="dice-1" class="dice show-1">
+            <div class="side"><span class="dot one-1"></span></div>
+            <div class="side"><span class="dot two-1"></span><span class="dot two-2"></span></div>
+            <div class="side"><span class="dot three-1"></span><span class="dot three-2"></span><span class="dot three-3"></span></div>
+            <div class="side"><span class="dot four-1"></span><span class="dot four-3"></span><span class="dot four-2"></span><span class="dot four-4"></span></div>
+            <div class="side"><span class="dot five-1"></span><span class="dot five-3"></span><span class="dot five-5"></span><span class="dot five-2"></span><span class="dot five-4"></span></div>
+            <div class="side">
+              <span class="dot six-1"></span><span class="dot six-2"></span><span class="dot six-3"></span>
+              <span class="dot six-4"></span><span class="dot six-5"></span><span class="dot six-6"></span>
             </div>
+          </div>
+        </div>
 
-            <div class="header-text">
-                <h2>DES 157A INTERACTIVE MEDIA II Winter 2026</h2>
-                <h1>JOSHUA’S<br>PORTAL</h1>
+                <div class="dice-wrap">
+          <div id="dice-1" class="dice show-1">
+            <div class="side"><span class="dot one-1"></span></div>
+            <div class="side"><span class="dot two-1"></span><span class="dot two-2"></span></div>
+            <div class="side"><span class="dot three-1"></span><span class="dot three-2"></span><span class="dot three-3"></span></div>
+            <div class="side"><span class="dot four-1"></span><span class="dot four-3"></span><span class="dot four-2"></span><span class="dot four-4"></span></div>
+            <div class="side"><span class="dot five-1"></span><span class="dot five-3"></span><span class="dot five-5"></span><span class="dot five-2"></span><span class="dot five-4"></span></div>
+            <div class="side">
+              <span class="dot six-1"></span><span class="dot six-2"></span><span class="dot six-3"></span>
+              <span class="dot six-4"></span><span class="dot six-5"></span><span class="dot six-6"></span>
             </div>
+          </div>
+        </div>
 
-            <!-- Note that im using label to achieve a psuedo click effect. Images can't actually have click effects, so I looked online and saw this was a solution. -->
-            <div class="arrows">
-                <input type="checkbox" id="a1" hidden>
-                <label for="a1"><img src="images/downarrow.png" alt="downarrow"></label>
 
-                <input type="checkbox" id="a2" hidden>
-                <label for="a2"><img src="images/downarrow.png" alt="downarrow"></label>
-
-                <input type="checkbox" id="a3" hidden>
-                <label for="a3"><img src="images/uparrow.png" alt="uparrow"></label>
-
-                <input type="checkbox" id="a4" hidden>
-                <label for="a4"><img src="images/uparrow.png" alt="uparrow"></label>
+        <div class="dice-wrap">
+          <div id="dice-2" class="dice show-2">
+            <div class="side"><span class="dot one-1"></span></div>
+            <div class="side"><span class="dot two-1"></span><span class="dot two-2"></span></div>
+            <div class="side"><span class="dot three-1"></span><span class="dot three-2"></span><span class="dot three-3"></span></div>
+            <div class="side"><span class="dot four-1"></span><span class="dot four-3"></span><span class="dot four-2"></span><span class="dot four-4"></span></div>
+            <div class="side"><span class="dot five-1"></span><span class="dot five-3"></span><span class="dot five-5"></span><span class="dot five-2"></span><span class="dot five-4"></span></div>
+            <div class="side">
+              <span class="dot six-1"></span><span class="dot six-2"></span><span class="dot six-3"></span>
+              <span class="dot six-4"></span><span class="dot six-5"></span><span class="dot six-6"></span>
             </div>
+          </div>
+        </div>
 
-        </header>
+        <div class="dice-wrap">
+          <div id="dice-3" class="dice show-3">
+            <div class="side"><span class="dot one-1"></span></div>
+            <div class="side"><span class="dot two-1"></span><span class="dot two-2"></span></div>
+            <div class="side"><span class="dot three-1"></span><span class="dot three-2"></span><span class="dot three-3"></span></div>
+            <div class="side"><span class="dot four-1"></span><span class="dot four-3"></span><span class="dot four-2"></span><span class="dot four-4"></span></div>
+            <div class="side"><span class="dot five-1"></span><span class="dot five-3"></span><span class="dot five-5"></span><span class="dot five-2"></span><span class="dot five-4"></span></div>
+            <div class="side">
+              <span class="dot six-1"></span><span class="dot six-2"></span><span class="dot six-3"></span>
+              <span class="dot six-4"></span><span class="dot six-5"></span><span class="dot six-6"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dice-wrap">
+          <div id="dice-4" class="dice show-4">
+            <div class="side"><span class="dot one-1"></span></div>
+            <div class="side"><span class="dot two-1"></span><span class="dot two-2"></span></div>
+            <div class="side"><span class="dot three-1"></span><span class="dot three-2"></span><span class="dot three-3"></span></div>
+            <div class="side"><span class="dot four-1"></span><span class="dot four-3"></span><span class="dot four-2"></span><span class="dot four-4"></span></div>
+            <div class="side"><span class="dot five-1"></span><span class="dot five-3"></span><span class="dot five-5"></span><span class="dot five-2"></span><span class="dot five-4"></span></div>
+            <div class="side">
+              <span class="dot six-1"></span><span class="dot six-2"></span><span class="dot six-3"></span>
+              <span class="dot six-4"></span><span class="dot six-5"></span><span class="dot six-6"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dice-wrap">
+          <div id="dice-5" class="dice show-5">
+            <div class="side"><span class="dot one-1"></span></div>
+            <div class="side"><span class="dot two-1"></span><span class="dot two-2"></span></div>
+            <div class="side"><span class="dot three-1"></span><span class="dot three-2"></span><span class="dot three-3"></span></div>
+            <div class="side"><span class="dot four-1"></span><span class="dot four-3"></span><span class="dot four-2"></span><span class="dot four-4"></span></div>
+            <div class="side"><span class="dot five-1"></span><span class="dot five-3"></span><span class="dot five-5"></span><span class="dot five-2"></span><span class="dot five-4"></span></div>
+            <div class="side">
+              <span class="dot six-1"></span><span class="dot six-2"></span><span class="dot six-3"></span>
+              <span class="dot six-4"></span><span class="dot six-5"></span><span class="dot six-6"></span>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Test -->
+        <div class="dice-wrap">
+          <div id="dice-6" class="dice show-6">
+            <div class="side"><span class="dot one-1"></span></div>
+            <div class="side"><span class="dot two-1"></span><span class="dot two-2"></span></div>
+            <div class="side"><span class="dot three-1"></span><span class="dot three-2"></span><span class="dot three-3"></span></div>
+            <div class="side"><span class="dot four-1"></span><span class="dot four-3"></span><span class="dot four-2"></span><span class="dot four-4"></span></div>
+            <div class="side"><span class="dot five-1"></span><span class="dot five-3"></span><span class="dot five-5"></span><span class="dot five-2"></span><span class="dot five-4"></span></div>
+            <div class="side">
+              <span class="dot six-1"></span><span class="dot six-2"></span><span class="dot six-3"></span>
+              <span class="dot six-4"></span><span class="dot six-5"></span><span class="dot six-6"></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="dice-divider" -hidden="true"></div>
+    </section>
+
+    <!-- Controls -->
+    <div class="controls">
+      <div class="player-pill">P1</div>
+      <button class="btn btn-primary" type="button">Start</button>
     </div>
 
-    <!--main-->
-<main>
-    <section class="projects">
-
-        <!-- I have no idea how but while I was finalizing everything to push it all I ended up losing my learning journal??? Just going to remake it tonight -->
-
-        <div class="column-card">
-            <ul>
-                <li><a href="journal/images/articlesketch-combined.pdf.pdf">Learning Journal Sketch</a></li>
-                <li><a href="journal/index.html">Learning Journal</a></li>
-                <li><a href="experiment/exp1.html">Experiment 1</a></li>
-                <li><a href="experiment/exp2.html">Experiment 2</a></li>
-            </ul>
-        </div>
-
-        <div class="column-card">
-            <ul>
-                <li><a href="malibs/concepts.pdf">Design version 1</a></li>
-                <li><a href="malibs/v1/index.html">Code Version 1</a></li>
-                <li><a href="malibs/v2/index.html">Final MadLib Project</a></li>
-                <li><a href="#">Improvements</a></li>
-            </ul>
-        </div>
-
-        <div class="column-card">
-            <ul>
-                <li><a href="#">Experiments</a></li>
-                <li><a href="#">Design Comp</a></li>
-                <li><a href="#">Code Version 1</a></li>
-                <li><a href="#">Final Every Picture Project</a></li>
-                <li><a href="#">Improvements</a></li>
-            </ul>
-        </div>
-
-        <div class="column-card">
-            <ul>
-                <li><a href="gameon/Note Mar 3, 2026-combined.pdf">Design Version 1</a></li>
-                <li><a href="gameon/yahtzeev1/index.html">Code Version 1</a></li>
-                <li><a href="gameon/evensteven/index.html">Final Game On Project</a></li>
-                <li><a href="extrecreditstudio/index.html">Extra credit studio</a></li>
-            </ul>
-        </div>
-
-    </section>
-</main>
-
-
-<!-- Note that the lorem ipsums will be replaced with more apt descriptions of what these subjects are. I haven't changed them since I haven't done the projects yet and therefore can't give a proper description on what the subject entailed. -->
- 
-    <!--footer-->
-    <footer>
-        <section class="subject-row">
-
-            <div class="subject">
-                <h2>RESEARCH</h2>
-                <p>Research includes intiial understandings of java.</p>
-            </div>
-
-            <div class="subject">
-                <h2>MAD LIB</h2>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </div>
-
-            <div class="subject">
-                <h2>EVERYPICTURE</h2>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </div>
-
-            <div class="subject">
-                <h2>GAME ON</h2>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </div>
-
-        </section>
-
-        <p class="credit">
-            Designed by Joshua Dedios — Contact me: &#106;&#115;&#100;&#101;&#100;&#105;&#111;&#115;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;
-        </p>
-    </footer>
-
-</div>
 
 </body>
 </html>
